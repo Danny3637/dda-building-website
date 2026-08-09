@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us — DDA Building LTD</title>
+  <meta name="description" content="Talk to our estimating team about a drylining package. Based in Manchester. Budget quotes returned within five working days.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <img class="brand__logo" src="images/logo.png" alt="DDA Building Ltd">
+      <span class="brand__text"><small>Drylining Specialists</small></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+      <span></span>
+    </button>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Our Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a class="btn btn--primary" href="contact.html" aria-current="page">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero hero--compact">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span>Contact Us
+      </nav>
+    </div>
+    <div class="wrap hero__inner">
+      <span class="eyebrow">Contact us</span>
+      <h1>Tell us about the package.</h1>
+      <p>Enquiries reach an estimator who has stood in a partitioned room, not a call centre. We acknowledge every enquiry within one business day and return budget quotes inside five working days.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid--2" style="gap:3rem;align-items:start">
+
+        <div>
+          <span class="eyebrow">Send an enquiry</span>
+          <h2>Project enquiry form</h2>
+          <p class="lead">Fields marked <span class="req">*</span> are required. If you have drawings or a specification, mention it below and we'll send a secure upload link.</p>
+
+          <form id="enquiry-form" novalidate action="https://formsubmit.co/ajax/timur@ddabuilding.com" method="POST">
+            <input type="hidden" name="_cc" value="dmitrij@ddabuilding.com">
+            <input type="hidden" name="_subject" value="New enquiry — DDA Building website">
+            <input type="hidden" name="_template" value="table">
+            <div class="form-grid">
+
+              <div class="field">
+                <label for="name">Your name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                <p class="error-text" id="name-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" autocomplete="organization">
+                <p class="error-text" id="company-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <p class="error-text" id="email-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+                <p class="error-text" id="phone-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="service">Service required <span class="req">*</span></label>
+                <select id="service" name="service" required>
+                  <option value="">Please choose…</option>
+                  <option>Metal stud partitioning</option>
+                  <option>Plasterboard &amp; boarding</option>
+                  <option>Suspended ceilings</option>
+                  <option>Taping, jointing &amp; skimming</option>
+                  <option>Acoustic &amp; thermal insulation</option>
+                  <option>Fire-rated partitions &amp; fire stopping</option>
+                  <option>Something else / not sure</option>
+                </select>
+                <p class="error-text" id="service-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="budget">Indicative budget</label>
+                <select id="budget" name="budget">
+                  <option value="">Prefer not to say</option>
+                  <option>Under £5k</option>
+                  <option>£5k – £25k</option>
+                  <option>£25k – £100k</option>
+                  <option>£100k – £250k</option>
+                  <option>Over £250k</option>
+                </select>
+                <p class="error-text" id="budget-error"></p>
+              </div>
+
+              <div class="field field--full">
+                <label for="location">Site location</label>
+                <input type="text" id="location" name="location" placeholder="Town or postcode">
+                <p class="hint">We work across the North West of England.</p>
+                <p class="error-text" id="location-error"></p>
+              </div>
+
+              <div class="field field--full">
+                <label for="message">Project details <span class="req">*</span></label>
+                <textarea id="message" name="message" required placeholder="What are you drylining, where, and by when? Any known constraints — fire rating, acoustic requirement, live-building access, phasing?"></textarea>
+                <p class="error-text" id="message-error" role="alert"></p>
+              </div>
+
+              <div class="field field--full consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">I'm happy for DDA Building LTD to contact me about this enquiry. <span class="req">*</span></label>
+              </div>
+              <p class="error-text" id="consent-error" role="alert" style="margin-top:-.75rem"></p>
+
+            </div>
+
+            <div class="btn-row" style="margin-top:1.25rem">
+              <button class="btn btn--primary" type="submit">Send enquiry</button>
+              <a class="btn btn--ghost" href="tel:+447703558776">Or call +44 7703 558776</a>
+            </div>
+
+            <p class="form-status" id="form-status" role="status" hidden></p>
+          </form>
+        </div>
+
+        <div>
+          <span class="eyebrow">Direct lines</span>
+          <h2>Get in touch</h2>
+
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/></svg>
+              <div><strong>General enquiries</strong><span><a href="tel:+447703558776">+44 7703 558776</a> — Mon–Fri, 08:00–17:30</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+              <div><strong>Email</strong><span><a href="mailto:timur@ddabuilding.com">timur@ddabuilding.com</a><br><a href="mailto:dmitrij@ddabuilding.com">dmitrij@ddabuilding.com</a></span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4.5 8-11a8 8 0 1 0-16 0c0 6.5 8 11 8 11z"/><circle cx="12" cy="11" r="3"/></svg>
+              <div><strong>Office</strong><span>83 Brydon Avenue<br>Manchester, M12 6JA</span></div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="grid grid--4">
+      <div>
+        <a class="brand" href="index.html">
+          <img class="brand__logo" src="images/logo.png" alt="DDA Building Ltd">
+          <span class="brand__text"><small>Since 2020</small></span>
+        </a>
+        <p style="font-size:.92rem">Trusted drylining workforce partner across the North West of England.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sectors</h4>
+        <ul>
+          <li><a href="projects.html">Residential</a></li>
+          <li><a href="projects.html">Student Accommodation</a></li>
+          <li><a href="projects.html">Education</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+447703558776">+44 7703 558776</a></li>
+          <li><a href="mailto:timur@ddabuilding.com">timur@ddabuilding.com</a></li>
+          <li><a href="mailto:dmitrij@ddabuilding.com">dmitrij@ddabuilding.com</a></li>
+          <li>83 Brydon Avenue<br>Manchester, M12 6JA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> DDA Building LTD. Registered in England &amp; Wales, no. 03514886.</span>
+      <span>Placeholder content — replace with your own details.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
