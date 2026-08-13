@@ -40,17 +40,16 @@ Then visit http://localhost:8000/ (or :5500).
 intercepts the submit, validates client-side, then `fetch()`s the form data to
 that endpoint.
 
-**Currently a stopgap:** `ddabuilding.com` has no mail hosting configured (no MX
-records), so the form temporarily posts to `daniilsdmitrijevs@gmail.com` instead
-of `timur@ddabuilding.com` / `dmitrij@ddabuilding.com`, which are displayed
-elsewhere on the site as the contact addresses but can't yet receive mail. Once
-proper email hosting is set up for the domain, update the form's `action` in
-`contact.html` back to the real addresses.
+The form posts to `timur@ddabuilding.com` (CC'd to `dmitrij@ddabuilding.com`) —
+`ddabuilding.com` now has MX records pointing to Google Workspace. (Note this is
+the `.com` domain for mail; the site itself is hosted on `ddabuilding.co.uk`,
+which has no MX records — that's fine, they're independent.)
 
 **One-time activation required:** the first submission to a new destination address
 triggers a confirmation email from FormSubmit. Until that confirmation link is
-clicked, submissions are silently dropped. Send a test enquiry through the live
-form after deploying and confirm it.
+clicked, submissions are silently dropped. Both `timur@` and `dmitrij@` need this
+done independently the first time they're used as a destination/CC. Send a test
+enquiry through the live form and confirm both.
 
 Server-side validation is FormSubmit's responsibility here — the client-side checks
 in `main.js` are for user experience, not security.
