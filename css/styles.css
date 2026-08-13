@@ -337,6 +337,13 @@ li { margin-bottom: .4rem; }
   color: var(--text-muted);
 }
 
+/* Below ~640px, auto-fit can land on exactly 2 columns for a 3-item stat
+   band, leaving an empty (grey) cell in the wrapped row. Force one column
+   on phones so that never happens; wider viewports keep the grid above. */
+@media (max-width: 640px) {
+  .stats { grid-template-columns: 1fr; }
+}
+
 /* --- Cards -------------------------------------------------------------- */
 .card {
   background: var(--white);
