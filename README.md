@@ -74,3 +74,16 @@ with Pages already enabled.
 
 All colours, spacing and typography come from custom properties at the top of
 `css/styles.css`. Changing `--navy-900` and `--amber-600` re-themes the whole site.
+
+## Caching after a deploy
+
+GitHub Pages caches every response (HTML included) for 10 minutes (`Cache-Control:
+max-age=600`), and this can't be configured — it's the platform default. Visitors
+who loaded a page in the last 10 minutes won't see a change until that expires,
+regardless of how many times they refresh.
+
+`css/styles.css` and `js/main.js` are loaded with a `?v=2` query string specifically
+so that changing that content is guaranteed to bust client-side caches (the browser
+treats `styles.css?v=2` as a different resource to `styles.css?v=1`). **Bump this
+number in all six HTML files whenever you change `styles.css` or `main.js`.**
+The HTML pages themselves still have the unavoidable 10-minute platform cache.
