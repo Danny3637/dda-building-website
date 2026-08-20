@@ -467,6 +467,27 @@ li { margin-bottom: .4rem; }
 }
 .project__meta strong { color: var(--navy-900); font-weight: 600; }
 
+/* --- Photo gallery (untitled site photos, masonry-style) ---------------- */
+.photo-gallery {
+  column-count: 4;
+  column-gap: 1rem;
+}
+.photo-gallery img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  break-inside: avoid;
+}
+@media (max-width: 900px) {
+  .photo-gallery { column-count: 3; }
+}
+@media (max-width: 640px) {
+  .photo-gallery { column-count: 2; column-gap: .75rem; }
+  .photo-gallery img { margin-bottom: .75rem; }
+}
+
 .no-results {
   padding: 2.5rem 1rem;
   text-align: center;
