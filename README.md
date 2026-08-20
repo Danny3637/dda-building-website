@@ -19,7 +19,7 @@ Shared assets: `css/styles.css`, `js/main.js`, `images/`.
 
 ## Running it locally
 
-Open `index.html` directly in a browser, or serve the folder:
+Serve the folder (don't just double-click `index.html` — see note below):
 
 ```powershell
 # Python 3
@@ -33,6 +33,14 @@ npx live-server --port=5500 --no-css-inject
 ```
 
 Then visit http://localhost:8000/ (or :5500).
+
+**Note on the "Home" links:** the logo, nav "Home" link and breadcrumbs use
+`href="/"` (root-relative) rather than `href="index.html"`, so that clicking
+them keeps the address bar on the bare domain instead of showing
+`/index.html`. This only resolves correctly when served over HTTP (any of the
+methods above, or the live GitHub Pages site) — opening `index.html` directly
+via `file://` will break those specific links, since `/` then resolves to the
+filesystem root rather than the site folder.
 
 ## The contact form
 
